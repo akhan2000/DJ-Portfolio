@@ -9,9 +9,6 @@
 
 ## Project Overview
 
-**Project Name:** DJ Portfolio
-
-**Description:**  
 
 The DJ Portfolio is a visually stunning and interactive personal portfolio website designed to showcase my professional journey, skills, and achievements. Built using modern web technologies, the site emphasizes a sleek user interface (UI) and seamless user experience (UX). It is containerized with Docker for consistent environments and deployed on GitHub Pages for easy access and sharing.
 
