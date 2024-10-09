@@ -1,0 +1,33 @@
+<div class="contact-container">
+  
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="input-field">
+      <input type="text" id="name" formControlName="name" placeholder="Name">
+      <div *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)"
+        class="alert alert-danger"> Name is required </div>
+    </div>
+    <div class="input-field">
+      <input type="email" id="email" formControlName="email" placeholder="Email">
+      <div *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)"
+        class="alert alert-danger"> Valid email is required </div>
+    </div>
+    <div class="input-field">
+      <input type="date" id="date" formControlName="date" placeholder="Date of Event">
+      <div *ngIf="contactForm.controls['date'].invalid && (contactForm.controls['date'].dirty || contactForm.controls['date'].touched)"
+        class="alert alert-danger"> Date is required </div>
+    </div>
+    <div class="input-field">
+      <input type="time" id="time" formControlName="time" placeholder="Time of Event">
+      <div *ngIf="contactForm.controls['time'].invalid && (contactForm.controls['time'].dirty || contactForm.controls['time'].touched)"
+        class="alert alert-danger"> Time is required </div>
+    </div>
+    <div class="input-field">
+      <textarea id="message" formControlName="message" placeholder="Message"></textarea>
+      <div *ngIf="contactForm.controls['message'].invalid && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)"
+        class="alert alert-danger"> Message is required </div>
+    </div>
+
+    <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+  </form>
+</div>
